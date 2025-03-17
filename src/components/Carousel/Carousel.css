@@ -131,15 +131,32 @@
   transform: translateY(-50%) translateX(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .carousel-container {
-    border-radius: 16px;
-    margin: 0 1rem;
+    border-radius: 20px;
   }
 
   .carousel-button {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .carousel-button svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    border-radius: 16px;
+    margin: 0;
+  }
+
+  .carousel-button {
+    width: 44px;
+    height: 44px;
     border-radius: 12px;
   }
 
@@ -148,17 +165,52 @@
   }
 
   .carousel-button svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .carousel-button.prev {
-    left: 16px;
-    transform: translateY(-50%) translateX(-4px);
+    left: 8px;
+    transform: translateY(-50%) translateX(-2px);
   }
 
   .carousel-button.next {
-    right: 16px;
-    transform: translateY(-50%) translateX(4px);
+    right: 8px;
+    transform: translateY(-50%) translateX(2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    border-radius: 12px;
+  }
+
+  .carousel-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .carousel-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .carousel-button.prev {
+    left: 4px;
+  }
+
+  .carousel-button.next {
+    right: 4px;
+  }
+
+  .carousel-slide::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0) 90%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
   }
 }
